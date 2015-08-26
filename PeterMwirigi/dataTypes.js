@@ -8,11 +8,17 @@ function dataTypes(x) {
     case 'boolean': 
         return 'Boolean';
     case 'number': 
-        return 'Number';
+    if (x % 1 === 0) {
+      return "Integer";
+    }
+    {
+    return "float"; 
+    }   
+    break;
     case 'string': 
-        return 'String';
+      return 'String';
     default: 
-        return 'Object';
+      return 'Object';
     }
 }
-dataTypes("Peter");
+dataTypes(1);
